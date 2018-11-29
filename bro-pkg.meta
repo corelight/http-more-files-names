@@ -1,2 +1,4 @@
 [package]
 script_dir = scripts
+test_command = (cd testing && btest -d)
+tags = http, files
