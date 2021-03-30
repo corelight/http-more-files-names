@@ -18,7 +18,7 @@ event http_header(c: connection, is_orig: bool, name: string, value: string) &pr
 	if ( is_orig )
 		return;
 
-	if ( name == "ETAG" && /\"/ in value )
+	if ( name == "ETAG" && /\"/ in value && c?$http && c$http?$current_entity)
 		{
 		if ( c$http?$potential_fname && c$http$potential_fname != "" )
 			c$http$current_entity$filename = c$http$potential_fname;
