@@ -1,5 +1,0 @@
-[package]
-description = Add more filenames to files.log from HTTP requests
-script_dir = scripts
-test_command = (cd testing && btest -d)
-tags = http, files
